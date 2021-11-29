@@ -1,0 +1,151 @@
+.viewport {                         
+    width: 100vw;
+    height: 100vh;                         
+    display: grid;                         
+    place-items: center;                         
+    padding: 20px;                         
+    background: url("pattern-background-mobile.svg") center top no-repeat;
+    background-size: contain;
+}                                               
+
+@media (min-width: 768px) {
+    .viewport {
+        background-image: url("pattern-background-desktop.svg") center top no-repeat;                           
+        background-size: contain;                         
+    }                       
+}
+article {                         
+    max-width: 375px;                         
+    border-radius: 16px;
+    background: hsl(225, 100%, 98%);                         
+    box-shadow: 0 28px 28px  hsla(224, 23%, 55%, 0.25);                    
+}
+
+.article__cover {
+    height: 185px;
+    background: url("illustration-hero.svg") center center no-repeat;                         
+    background-size: cover;                         
+    border-radius: 16px 16px 0 0;                       
+}
+
+.article__content {
+    padding: 32px;                       
+}   
+
+.article__content > * {                         
+    margin: 0;                         
+    text-align: center;                         
+    margin-top: 24px;                       
+} 
+
+.article__content > *:first-child {                        
+    margin: 0;                       
+}   
+
+@media (min-width: 768px) {
+    .article__content > *:first-child {
+        margin-top: 24px;                         
+    }                       
+}
+.option {                         
+    background: hsl(225, 100%, 94%);
+    padding: 16px;                         
+    border-radius: 12px;                         
+    display: flex;                         
+    flex-wrap: nowrap;                         
+    justify-content: center;                         
+    align-items: center;                       
+}                                               
+
+.width-25 {                         
+    width: 25%;                       
+}                                               
+
+.width-50 {                         
+    width: 50%;                       
+}                                               
+
+.icon#music {                         
+    background: url("icon-music.svg") center center no-repeat;                         
+    background-size: contain;                       
+} 
+
+.col-text {                         
+    display: flex;                         
+    align-items: start;                         
+    flex-direction: column;                         
+    gap: 4px;                       
+}   
+
+.col-buttons {                         
+    display: flex;                         
+    flex-direction: column;                         
+    gap: 8px;                       
+}
+
+.title {
+    font-weight: 900;
+    font-size: 24px;
+    color: hsl(223, 47%, 23%);
+    }
+  
+  .paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+  }
+  
+  .label {
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(223, 47%, 23%);
+  }
+  
+  a.link {
+    font-weight: 900;
+    font-size: 12.8px;
+    color: hsl(245, 75%, 52%);
+    display: inline-block;
+    transition: color 100ms linear;
+  }
+  
+  a.link:is(:hover, :focus) {
+    opacity: 0.65;
+    text-decoration: none;
+  }
+  
+  button.btn {
+    border: 0;
+    display: block;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: opacity 100ms ease, color 100ms ease, box-shadow 100ms ease;
+  }
+  
+  button.btn.centric {
+    color: hsl(225, 100%, 98%);
+    background: hsl(245, 75%, 52%);
+    box-shadow: 0 8px 16px hsl(245, 75%, 52%, 0.35);
+  }
+  
+  button.btn.centric:is(:hover, :focus) {
+    opacity: 0.65;
+    
+  }
+  
+  button.btn.transparent {
+    color: hsl(224, 23%, 55%);
+    
+  }
+  
+  button.btn.transparent:is(:hover, :focus) {
+    color: hsl(223, 47%, 23%);
+  }
+  
+  .icon {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
