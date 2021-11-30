@@ -1,151 +1,144 @@
-.viewport {                         
-    width: 100vw;
-    height: 100vh;                         
-    display: grid;                         
-    place-items: center;                         
-    padding: 20px;                         
-    background: url("pattern-background-mobile.svg") center top no-repeat;
-    background-size: contain;
-}                                               
+.viewport {
+  background: url("pattern-background-mobile.svg") center top no-repeat;
+  background-size: contain;
+  display:grid;
+  height: 100vh;
+  padding: 1.5rem;
+  place-items: center;
+  width: 100vw;
+}                                            
 
 @media (min-width: 768px) {
-    .viewport {
-        background-image: url("pattern-background-desktop.svg") center top no-repeat;                           
-        background-size: contain;                         
-    }                       
-}
-article {                         
-    max-width: 375px;                         
-    border-radius: 16px;
-    background: hsl(225, 100%, 98%);                         
-    box-shadow: 0 28px 28px  hsla(224, 23%, 55%, 0.25);                    
+  .viewport {
+    background-image: url("pattern-background-desktop.svg");
+  }                       
 }
 
-.article__cover {
-    height: 185px;
-    background: url("illustration-hero.svg") center center no-repeat;                         
-    background-size: cover;                         
-    border-radius: 16px 16px 0 0;                       
+article {
+  background: #F5F7FF;
+  border-radius: 1rem;
+  box-shadow: 0 1.75rem 1.75rem  #7280A740;
+  max-width: 375px;                    
 }
 
-.article__content {
-    padding: 32px;                       
+button.btn {
+  border: 0;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1rem;
+  transition: 100ms all ease;
+  }
+  
+button.btn.centric {
+    background: #3829E0;
+    box-shadow: 0 0.5rem 1rem #3829E0;
+    color: #F5F7FF;
+}
+
+button.btn.centric:hover {
+  opacity: 0.65;
+}
+
+button.btn.transparent {
+  color: #7280A7;
+}
+
+button.btn.transparent:hover {
+  color: #1F2F56;
+}
+
+a.link {
+  color: #3829E0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12.8px;
+  font-weight: 900;
+  transition: color 100ms linear;
+}
+
+a.link:hover {
+  opacity: 0.65;
+  text-decoration: none;
+}
+
+.article_content {
+  padding: 1.5rem;                       
 }   
 
-.article__content > * {                         
-    margin: 0;                         
-    text-align: center;                         
-    margin-top: 24px;                       
+.article_content > * {
+  margin: 0;
+  margin-top: 1.5rem;
+  text-align: center;                         
 } 
 
-.article__content > *:first-child {                        
-    margin: 0;                       
-}   
-
-@media (min-width: 768px) {
-    .article__content > *:first-child {
-        margin-top: 24px;                         
-    }                       
+.article_cover {
+  background: url("illustration-hero.svg") center center no-repeat;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 12rem;                      
 }
-.option {                         
-    background: hsl(225, 100%, 94%);
-    padding: 16px;                         
-    border-radius: 12px;                         
-    display: flex;                         
-    flex-wrap: nowrap;                         
-    justify-content: center;                         
-    align-items: center;                       
+
+.option {
+  align-items: center;
+  background: #E0E8FF;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 1rem                      
+}                                              
+
+.width_25 {
+  width: 25%;
 }                                               
 
-.width-25 {                         
-    width: 25%;                       
+.width_50 {                         
+  width: 50%;                       
+}
+
+.icon {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
 }                                               
 
-.width-50 {                         
-    width: 50%;                       
-}                                               
-
-.icon#music {                         
-    background: url("icon-music.svg") center center no-repeat;                         
-    background-size: contain;                       
+#music {                         
+  background: url("icon-music.svg") center center no-repeat;                         
+  background-size: contain;                       
 } 
 
-.col-text {                         
-    display: flex;                         
-    align-items: start;                         
-    flex-direction: column;                         
-    gap: 4px;                       
+.col_text {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;                 
 }   
 
-.col-buttons {                         
-    display: flex;                         
-    flex-direction: column;                         
-    gap: 8px;                       
+.col_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .title {
-    font-weight: 900;
-    font-size: 24px;
-    color: hsl(223, 47%, 23%);
-    }
+  color: #1F2F56;
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 1rem;
+}
   
-  .paragraph {
-    font-weight: 500;
-    font-size: 16px;
-    color: hsl(224, 23%, 55%);
-  }
-  
-  .label {
-    font-weight: 700;
-    font-size: 16px;
-    color: hsl(223, 47%, 23%);
-  }
-  
-  a.link {
-    font-weight: 900;
-    font-size: 12.8px;
-    color: hsl(245, 75%, 52%);
-    display: inline-block;
-    transition: color 100ms linear;
-  }
-  
-  a.link:is(:hover, :focus) {
-    opacity: 0.65;
-    text-decoration: none;
-  }
-  
-  button.btn {
-    border: 0;
-    display: block;
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    transition: opacity 100ms ease, color 100ms ease, box-shadow 100ms ease;
-  }
-  
-  button.btn.centric {
-    color: hsl(225, 100%, 98%);
-    background: hsl(245, 75%, 52%);
-    box-shadow: 0 8px 16px hsl(245, 75%, 52%, 0.35);
-  }
-  
-  button.btn.centric:is(:hover, :focus) {
-    opacity: 0.65;
-    
-  }
-  
-  button.btn.transparent {
-    color: hsl(224, 23%, 55%);
-    
-  }
-  
-  button.btn.transparent:is(:hover, :focus) {
-    color: hsl(223, 47%, 23%);
-  }
-  
-  .icon {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-  }
+.paragraph {
+  color: #7280A7;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.label {
+  color: #1F2F56;
+  font-size: 16px;
+  font-weight: 700;
+}
+
